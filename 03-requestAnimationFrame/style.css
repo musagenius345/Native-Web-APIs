@@ -1,0 +1,15 @@
+body{
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+.centre{
+  margin: 10vh auto;
+  text-align: center;
+}
+.counter{
+  font-size: 5rem;
+}
+p{
+  font-size: 2rem;
+}

@@ -1,0 +1,40 @@
+  body {
+    position: relative;
+  }
+
+  .codeContainer {
+    display: flex;
+    justify-content: space-between;
+
+  }
+
+  .copyButton {
+    opacity: 0;
+    align-self: flex-start;
+    width: 80px;
+    margin-bottom: 0;
+    transition: all ease-in 300ms;
+    background-color: hsla(235, 3%, 64%, 1);
+    margin-inline-end: 6px;
+  }
+
+  .copyButton:is(:hover, :focus) {
+    opacity: 1;
+  }
+
+  .copyPopup {
+    background-color: hsla(95, 76%, 29%, 1);
+    animation: backInRight;
+    margin-block: 0.8rem;
+    animation-duration: 200ms;
+  }
+
+  :popover-open {
+    position: absolute;
+    top: 80%;
+    left: 60%;
+    margin: 1rem;
+    width: 400px;
+    padding: .3rem 1rem;
+    border-radius: 12px;
+  }

@@ -1,0 +1,33 @@
+:root{
+  --spacing: 0.8rem;
+}
+
+.flexbox-grid {
+  --min: 30ch;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flexbox-grid>* {
+  flex: 1 1 var(--min);
+}
+
+article{
+  margin-inline: .5rem;
+}
+
+.flexbox-grid[aria-busy="true"]{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+}
+
+.productPrice{
+  color: red;
+}
+
+.productImage{
+  border-radius: 12px;
+}

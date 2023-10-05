@@ -1,0 +1,67 @@
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1em;
+      margin: 20px;
+      column-count: 3;
+    }
+
+    .item {
+      background-color: var(--item-bg, #C681C9);
+      color: #00000000;
+      padding: 10px;
+      height: 320px;
+      animation: backInUp;
+      animation-duration: 300ms;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    /* Define different classes with different colors */
+    .item:nth-child(8n+1) {
+      --item-bg: #DD699A;
+      /* Item 1, 9, 17, etc. */
+    }
+
+    .item:nth-child(8n+2) {
+      --item-bg: #8195C9;
+      /* Item 2, 10, 18, etc. */
+    }
+
+    .item:nth-child(8n+3) {
+      --item-bg: #81B6C9;
+      /* Item 3, 11, 19, etc. */
+    }
+
+    /* Repeat this for colors 4 through 8 */
+    .item:nth-child(8n+4) {
+      --item-bg: #81C983;
+      /* Item 4, 12, 20, etc. */
+    }
+
+    .item:nth-child(8n+5) {
+      --item-bg: #C99881;
+      /* Item 5, 13, 21, etc. */
+    }
+
+    .item:nth-child(8n+6) {
+      --item-bg: #C481C9;
+      /* Item 6, 14, 22, etc. */
+    }
+
+    .item:nth-child(8n+7) {
+      --item-bg: #81BCC9;
+      /* Item 7, 15, 23, etc. */
+    }
+
+    .item:nth-child(8n+8) {
+      --item-bg: #C681C9;
+      /* Item 8, 16, 24, etc. */
+    }

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/pico.css">
+  <!-- <title>History API crash course</title> -->
+  <title>Understanding the History API</title>
+  <style>
+    :root {
+      --primary: hsla(130, 85%, 32%, 1)
+    }
+  </style>
+</head>
+
+<body class="container">
+  <h1>Understanding the History API</h1>
+  <p>The History API is a powerful feature in modern web development that allows you to manipulate the browser's session history and URL without triggering a full page refresh.</p>
+
+  <p>Here's how it works:</p>
+
+  <ol>
+    <li><strong>pushState() Method:</strong> You can use the <code>pushState()</code> method to push a new state onto the history stack and update the URL. For example:</li>
+    <div class="code">
+      <code>window.history.pushState({}, '', '/new-page');</code>
+    </div>
+
+    <li><strong>popstate Event:</strong> The <code>popstate</code> event is fired when the user navigates through their history, either by clicking the back/forward buttons or by using JavaScript to manipulate the history. You can listen for this event and handle changes. For example:</li>
+    <div class="code">
+      <code>window.addEventListener('popstate', (event) => {<br> // Handle history change here<br>});</code>
+    </div>
+  </ol>
+
+  <p>With these two components, you can create client-side routing, build single-page applications (SPAs), and provide a seamless user experience by updating content on the page without full page reloads.</p>
+
+  <p>Explore the possibilities of the History API to enhance your web applications and create dynamic user interfaces.</p>
+
+
+  <!-- Add two buttons for Home and Page 1 -->
+<!--   <div class="pagination">
+  <button id="home-button">Home</button>
+  <button id="page-1-button">Page 1</button>
+</div> -->
+  <script>
+    const loadAbout = () => {
+      history.pushState(null, null, 'about')
+      document.body.append('I am the about page')
+    }
+    
+    window.addEventListener('popstate', e => {
+      console.log(e)
+    })
+  </script>
+</body>
+
+</html>

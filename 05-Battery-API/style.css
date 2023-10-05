@@ -1,0 +1,100 @@
+@property --a {
+  initial-value: 0deg;
+  inherits: false;
+  syntax: '<angle>';
+}
+
+@property --h {
+  initial-value: 0;
+  inherits: false;
+  syntax: '<number>';
+}
+
+
+
+:root {
+  /* --battery-status: green; */
+  /* --chargeColor: red; */
+}
+
+.centre {
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(1fr, 10);
+}
+
+.currentCharge {
+  transition: all 300ms ease-in-out 200ms;
+  /* --color: hsla(137, 100%, 25%, 1); */
+}
+
+/* .currentCharge[data-battery-status="true"]{
+  color: hsla(137, 100%, 86%, 1);
+  
+} */
+[data-battery-status] {
+  --battery-status: #EEE60D;
+  background-image: url('spark-icon.svg');
+  background-size: 8rem;
+  background-origin: center;
+  background-position: center;
+}
+
+[data-battery-status='false'] {
+  background: none;
+  --battery-status: cyan;
+}
+
+h1{
+  color:#5A65E8;
+}
+
+.battery {
+  border-radius: 0.8rem;
+  margin-inline: auto;
+  margin-block: 5rem;
+  /* outline: 5px solid #A8ADA9; */
+  outline-offset: 2px;
+  background-color: var(--battery-status);
+  width: 70vw;
+  width: 70dvw;
+  min-height: 60vh;
+  min-height: 60dvh;
+  text-align: center;
+}
+
+
+.loader:is([data-battery-status='true']) {
+  border-style: solid;
+  border-width: 3vmin;
+  color: #5A65E8;
+  --charge: hsl(var(--h, 0), 80%, 50%);
+  border-image: conic-gradient(var(--charge) var(--a), transparent calc(var(--a) + 0.5deg)) 30;
+  animation: load 2s infinite ease-in-out;
+}
+
+@keyframes load {
+
+  0%,
+  10% {
+    --a: 0deg;
+    --h: 0;
+  }
+
+  100% {
+    --a: 360deg;
+    --h: 100;
+  }
+}
+
+.plugin{
+  text-align: center;
+  background-color: hsla(0, 100%, 49%, 0.1);
+  font-size: 1.4rem;
+  border-radius: 12px;
+  font-weight: 500;
+  padding: 0 4rem;
+  margin: 1rem auto;
+  outline: 2px solid red;
+  outline-offset: 2px;
+} 
