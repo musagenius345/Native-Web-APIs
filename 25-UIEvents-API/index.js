@@ -1,16 +1,37 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const outerBox = document.getElementById('outer');
-  const innerBox = document.getElementById('inner');
-  const outputDiv = document.getElementById('output');
+    const output = document.getElementById('output');
+    const clickButton = document.getElementById('clickButton');
+    const inputText = document.getElementById('inputText');
 
-  // Event handler function
-  function logEventPhase(event) {
-    // Log event type and phase
-    outputDiv.innerHTML += `Event: ${event.type}, Phase: ${event.eventPhase}<br>`;
-  }
+    clickButton.addEventListener('click', () => {
+        output.innerHTML = 'Button Clicked!';
+    });
 
-  // Event listeners for different phases (capture, target, bubble)
-  outerBox.addEventListener('click', logEventPhase, true); // Capture phase
-  outerBox.addEventListener('click', logEventPhase); // Bubble phase
-  innerBox.addEventListener('click', logEventPhase); // Bubble phase
+    inputText.addEventListener('input', (event) => {
+        output.innerHTML = `Input Changed: ${event.target.value}`;
+    });
+
+    inputText.addEventListener('keydown', (event) => {
+        output.innerHTML = `Key Down: ${event.key}`;
+    });
+
+    inputText.addEventListener('keyup', (event) => {
+        output.innerHTML = `Key Up: ${event.key}`;
+    });
+
+    inputText.addEventListener('focus', () => {
+        output.innerHTML = 'Input Focused';
+    });
+
+    inputText.addEventListener('blur', () => {
+        output.innerHTML = 'Input Blurred';
+    });
+
+    inputText.addEventListener('mouseenter', () => {
+        output.innerHTML = 'Mouse Entered Input';
+    });
+
+    inputText.addEventListener('mouseleave', () => {
+        output.innerHTML = 'Mouse Left Input';
+    });
 });

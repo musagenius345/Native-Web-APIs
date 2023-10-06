@@ -1,25 +1,37 @@
-body {
-    max-width: 500px;
-    margin: 2em auto;
-    padding: 0 1em;
-    font-size: 20px;
-}
+document.addEventListener('DOMContentLoaded', () => {
+    const output = document.getElementById('output');
+    const clickButton = document.getElementById('clickButton');
+    const inputText = document.getElementById('inputText');
 
-.box {
-    width: 200px;
-    height: 100px;
-    text-align: center;
-    line-height: 100px;
-    margin-bottom: 20px;
-    background-color: lightblue;
-    cursor: pointer;
-}
+    clickButton.addEventListener('click', () => {
+        output.innerHTML = 'Button Clicked!';
+    });
 
-#inner {
-    background-color: lightgreen;
-}
+    inputText.addEventListener('input', (event) => {
+        output.innerHTML = `Input Changed: ${event.target.value}`;
+    });
 
-#output {
-    margin-top: 20px;
-    font-family: monospace;
-}
+    inputText.addEventListener('keydown', (event) => {
+        output.innerHTML = `Key Down: ${event.key}`;
+    });
+
+    inputText.addEventListener('keyup', (event) => {
+        output.innerHTML = `Key Up: ${event.key}`;
+    });
+
+    inputText.addEventListener('focus', () => {
+        output.innerHTML = 'Input Focused';
+    });
+
+    inputText.addEventListener('blur', () => {
+        output.innerHTML = 'Input Blurred';
+    });
+
+    inputText.addEventListener('mouseenter', () => {
+        output.innerHTML = 'Mouse Entered Input';
+    });
+
+    inputText.addEventListener('mouseleave', () => {
+        output.innerHTML = 'Mouse Left Input';
+    });
+});
