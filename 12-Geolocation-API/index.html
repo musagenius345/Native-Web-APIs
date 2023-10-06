@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../pico.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Geolocation API</title>
+</head>
+
+<body>
+    <div class="container">
+    <h1>Geolocation API</h1>
+    <div class="buttons-wrapper">
+        <button id="button-get-position" class="button-demo">Get current position</button>
+        <button id="button-watch-position" class="button-demo">Watch position</button>
+        <button id="button-stop-watching" class="button-demo">Stop watching position</button>
+    </div>
+    <span id="g-unsupported" class="hidden">API not supported</span>
+    <h2>Information</h2>
+    <div id="g-information">
+        <ul>
+            <li>Your position is <span id="latitude" class="g-info">unavailable</span>° latitude,
+                <span id="longitude" class="g-info">unavailable</span>° longitude (with an accuracy of
+                <span id="position-accuracy" class="g-info">unavailable</span> meters)
+            </li>
+            <li>Your altitude is <span id="altitude" class="g-info">unavailable</span> meters
+                (with an accuracy of <span id="altitude-accuracy" class="g-info">unavailable</span> meters)
+            </li>
+            <li>You're <span id="heading" class="g-info">unavailable</span>° from the True north</li>
+            <li>You're moving at a speed of <span id="speed" class="g-info">unavailable</span>° meters/second</li>
+            <li>Data updated at <span id="timestamp" class="g-info">unavailable</span></li>
+        </ul>
+    </div>
+    <h3>Log</h3>
+    <div id="log"></div>
+    <button id="clear-log" class="button-demo">Clear log</button>
+    </div>
+<script type="module" src="index.js"></script>
+</body>
+
+</html>

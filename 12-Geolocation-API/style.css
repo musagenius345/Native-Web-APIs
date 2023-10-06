@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 500px;
+    margin: 2em auto;
+    padding: 0 0.5em;
+    font-size: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.buttons-wrapper {
+    text-align: center;
+}
+
+.button-demo {
+    padding: 0.5em;
+    margin: 1em auto;
+}
+
+.g-info {
+    font-weight: bold;
+}
+
+#log {
+    height: 200px;
+    width: 100%;
+    overflow-y: scroll;
+    border: 1px solid #333333;
+    line-height: 1.3em;
+}
+
+.author {
+    display: block;
+    margin-top: 1em;
+}
