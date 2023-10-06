@@ -1,0 +1,25 @@
+body {
+    max-width: 500px;
+    margin: 2em auto;
+    padding: 0 1em;
+    font-size: 20px;
+}
+
+.box {
+    width: 200px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    margin-bottom: 20px;
+    background-color: lightblue;
+    cursor: pointer;
+}
+
+#inner {
+    background-color: lightgreen;
+}
+
+#output {
+    margin-top: 20px;
+    font-family: monospace;
+}

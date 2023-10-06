@@ -1,0 +1,14 @@
+body {
+    max-width: 500px;
+    margin: 2em auto;
+    padding: 0 1em;
+    font-size: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+canvas {
+    border: 1px solid black;
+}
