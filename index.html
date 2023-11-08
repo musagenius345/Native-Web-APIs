@@ -1,24 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>HTML</title>
-  
-  <!-- HTML -->
-  
-
-  <!-- Custom Styles -->
-  <link rel="stylesheet" href="pico.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Native Web APIs Repository</title>
 </head>
+<body>
+    <header>
+        <h1>Native Web APIs Repository</h1>
+        <p>This repository contains examples and demos of various Native Web APIs, organized into separate folders based on their respective APIs. Each folder contains practical examples and explanations to help you understand and utilize these powerful web technologies.</p>
+    </header>
+    
+    <nav>
+        <h2>Table of Contents</h2>
+        <ul>
+            <li><a href="./01-history-api">History API</a>: Manipulate the browser's history and navigate between pages without full page reloads.</li>
+            <li><a href="./02-IntersectionObserver">Intersection Observer API</a>: Detect when an element enters or exits the viewport.</li>
+            <li><a href="./03-requestAnimationFrame">requestAnimationFrame API</a>: Efficiently animate elements using the browser's native animation capabilities.</li>
+            <li><a href="./04-Clipboard-API">Clipboard API</a>: Access and modify the clipboard contents programmatically.</li>
+            <li><a href="./05-Battery-API">Battery API</a>: Retrieve battery status and monitor changes in battery level and charging status.</li>
+            <li><a href="./06-Date-API">Date API</a>: Work with dates and times in JavaScript.</li>
+            <li><a href="./07-FormData-API">FormData API</a>: Create and manipulate `FormData` objects for easy form submissions.</li>
+            <li><a href="./08-Fetch-API">Fetch API</a>: Perform network requests using the modern Fetch API.</li>
+            <li><a href="./09-MediaCapture-API">Media Capture API</a>: Access and manipulate media devices like cameras and microphones.</li>
+            <li><a href="./10-ContactPicker-API">Contact Picker API</a>: Pick contacts from the user's address book.</li>
+            <li><a href="./11-Vibration-API">Vibration API</a>: Control the device's vibration capabilities.</li>
+            <li><a href="./12-Geolocation-API">Geolocation API</a>: Retrieve the user's geographical position.</li>
+            <li><a href="./13-Notification-API">Notification API</a>: Create native notifications to alert users.</li>
+            <li><a href="./14-File-API">File API</a>: Work with files on the user's system.</li>
+            <li><a href="./15-DeviceOrientation-API">Device Orientation API</a>: Retrieve device orientation and motion data.</li>
+            <li><a href="./16-Canvas-API">Canvas API</a>: Draw and manipulate graphics using the HTML canvas element.</li>
+            <li><a href="./17-WebAnimation-API">Web Animation API</a>: Create complex animations using the Web Animation API.</li>
+            <li><a href="./18-IndexedDB">IndexedDB API</a>: Store large amounts of structured data on the client-side.</li>
+            <li><a href="./19-Permission-API">Permission API</a>: Check and request user permissions for various actions.</li>
+            <li><a href="./20-LocalStorage">Local Storage</a>: Use local storage to store key-value pairs persistently.</li>
+            <li><a href="./21-ServiceWorker-API">Service Worker API</a>: Implement service workers for offline capabilities and background sync.</li>
+            <li><a href="./22-WebWorkers">Web Workers</a>: Run JavaScript in the background using web workers for improved performance.</li>
+            <li><a href="./23-URL-API">URL API</a>: Parse and manipulate URLs easily.</li>
+            <li><a href="./24-Push-API">Push API</a>: Implement push notifications for your web app.</li>
+            <li><a href="./25-UIEvents-API">UI Events API</a>: Explore various UI events and their applications.</li>
+            <li><a href="./26-WebAudio-API">Web Audio API</a>: Manipulate audio in the browser, create music, or process audio signals.</li>
+            <li><a href="./27-PageVisibity-API">Page Visibility API</a>: Determine the visibility state of the page.</li>
+            <li><a href="./28-Dataset">Dataset API</a>: Work with custom data attributes on HTML elements.</li>
+            <li><a href="./29-PaymentRequest-API">Payment Request API</a>: Request payments securely from users.</li>
+        </ul>
+    </nav>
 
-<body class="container">
-  <p>Nothing to see here...</p>
-  <input type="date" name="" id="dateInput">
-  <button onclick="dateInput.showPicker()">Pick A Date</button>
-  <!-- Project -->
-  <script src="main.js"></script>
+    <section>
+        <h2>How to Use</h2>
+        <p>Each folder will contain its own README file with detailed explanations and examples for the respective API. Navigate to the specific folder you are interested in and follow the instructions provided in the README file.</p>
+    </section>
+
+    <section>
+        <h2>Contributing</h2>
+        <p>If you find issues with any of the examples or have suggestions for improvement, feel free to open an issue or submit a pull request. Contributions are highly encouraged!</p>
+    </section>
+
+    <footer>
+        <p>This repository is licensed under the MIT License - see the <a href="LICENSE">LICENSE</a> file for details.</p>
+    </footer>
 </body>
 </html>
